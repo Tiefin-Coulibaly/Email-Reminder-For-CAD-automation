@@ -12,9 +12,9 @@ def generate_email_body():
         <body style="font-family: Arial, sans-serif; font-size: 14px; color: #333;">
             <p>Dear Team,</p>
 
-            <p>This is a friendly reminder to <strong>save any updates made on the feature layers in the SDE</strong> before <strong>11:30 AM</strong> today.</p>
+            <p>This is a friendly reminder to <strong>save any updates made on the feature classes in the SDE</strong> before <strong>12:00 PM</strong> today.</p>
 
-            <p>The automated DWG conversion process will run at that time, and any unsaved edits will not be included in the export.</p>
+            <p>The automated CAD routine update process will run at that time, and any unsaved edits on feature classes related to it will not be included in the export.</p>
 
             <p><strong>Date:</strong> {today.strftime('%B %d, %Y')}</p>
 
@@ -33,7 +33,7 @@ def send_email(
 ):
     from_email = "CorporateGIS@regina.ca"
     smtp_server = "smtp.city.regina.ca"
-    subject = "🔔 Reminder: Save your SDE edits before 11:30 AM — automated DWG conversion scheduled"
+    subject = "🔔 Reminder: Save your SDE edits before 12:00 PM — automated DWG conversion scheduled"
     to_email = [
         "AZHANG@regina.ca",
         "RFAROOQ@regina.ca",
